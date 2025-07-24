@@ -1,13 +1,20 @@
 const MenuBarContainer = () => {
   return (
     <div className="menu-bar-container">
-      <h2>Menu Bar</h2>
+      <img src="/logo.png" alt="Logo" className="logo" />
+      <h2>MAIN MENU</h2>
       <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Settings</li>
-        <li>Logout</li>
+        <li><img src="" alt="dashboard" />Dashboard</li>
+        <li><img src="" alt="recruitment" />Recruitment</li>
+        <li><img src="" alt="schedule" />Schedule</li>
+        <li><img src="" alt="employee" />Employee</li>
+        <li><img src="" alt="department" />Department</li>
       </ul>
+      <h2>OTHER</h2>
+        <ul>
+        <li><img src="" alt="support" />Support</li>
+        <li><img src="" alt="settings" />Settings</li>
+        </ul>
     </div>
   );
 };

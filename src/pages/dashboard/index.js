@@ -1,9 +1,9 @@
 import MenuBarContainer from "@/components/DashboardComponent/MenuBarContainer";
+import Navbar from "@/components/DashboardComponent/NavbarContainer";
 const dashboard = () => {
   return (
     <>
-      <h1>Dashboard</h1>
-      <p>Welcome to your dashboard!</p>
+      <Navbar />
       <MenuBarContainer />
     </>
   );

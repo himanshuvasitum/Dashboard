@@ -1,3 +1,4 @@
+import MainContainer from "@/components/DashboardComponent/MainContainer";
 import MenuBarContainer from "@/components/DashboardComponent/MenuBarContainer";
 import Navbar from "@/components/DashboardComponent/NavbarContainer";
 const dashboard = () => {
@@ -5,6 +6,7 @@ const dashboard = () => {
     <>
       <Navbar />
       <MenuBarContainer />
+      <MainContainer/>
     </>
   );
 };

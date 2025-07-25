@@ -1,21 +1,99 @@
+import React, { useState } from "react";
+import DashboardIcon from "../../../public/Icons/dashboard";
+import RecruitmentIcon from "../../../public/Icons/recruitment";
+import ScheduleIcon from "../../../public/Icons/schedule";
+import EmployeeIcon from "../../../public/Icons/employee";
+import DepartmentIcon from "../../../public/Icons/department";
+import SupportIcon from "../../../public/Icons/support";
+import SettingIcon from "../../../public/Icons/settings";
 const MenuBarContainer = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive((prev) => !prev);
+  };
   return (
-    <div className="menu-bar-container">
-      <img src="/logo.png" alt="Logo" className="logo" />
-      <h2>MAIN MENU</h2>
-      <ul>
-        <li><img src="" alt="dashboard" />Dashboard</li>
-        <li><img src="" alt="recruitment" />Recruitment</li>
-        <li><img src="" alt="schedule" />Schedule</li>
-        <li><img src="" alt="employee" />Employee</li>
-        <li><img src="" alt="department" />Department</li>
-      </ul>
-      <h2>OTHER</h2>
+    <>
+      <div className="menu-bar-container">
+        <img src="/Vasitum Logo.svg" alt="Logo" className="logo" />
+        <h2>MAIN MENU</h2>
         <ul>
-        <li><img src="" alt="support" />Support</li>
-        <li><img src="" alt="settings" />Settings</li>
+          <li>
+            <button>
+              <DashboardIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+            </button>
+            Dashboard
+          </li>
+          <li>
+            <button>
+              <RecruitmentIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+            </button>
+            Recruitment
+          </li>
+          <li>
+            <button>
+              <ScheduleIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+            </button>
+            Schedule
+          </li>
+          <li>
+            <button>
+              <EmployeeIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+            </button>
+            Employee
+          </li>
+          <li>
+            <button>
+              <DepartmentIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+            </button>
+            Department
+          </li>
         </ul>
-    </div>
+        <h2>OTHER</h2>
+        <ul>
+          <li>
+            <button>
+              <SupportIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+            </button>
+            Support
+          </li>
+          <li>
+            <button>
+              <SettingIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+            </button>
+            Settings
+          </li>
+        </ul>
+      </div>
+      <style jsx>{`
+        .menu-bar-container {
+          display: flex;
+          flex-direction: column;
+          width: 242px;
+          height: 100vh;
+          background-color: white;
+          padding: 0px;
+          position: fixed;
+          left: 0;
+          z-index: 2;
+          border: 1px solid #e0e0e0;
+        }
+        .logo {
+          width: 100px;
+          margin-bottom: 20px;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        li {
+          margin: 10px 0;
+        }
+        img {
+          margin-right: 10px;
+        }
+      `}</style>
+    </>
   );
 };
 export default MenuBarContainer;

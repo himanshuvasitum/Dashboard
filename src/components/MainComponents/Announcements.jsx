@@ -15,10 +15,10 @@ export default function Announcements() {
           <div className="announcement-details" key={index}>
             <div className="content">
               <h3>{announcement?.message}</h3>
-              <small>{announcement?.time}</small>
               <PinIcon fill={isPin ? "black" : "#B2B2B2"} />
-              <h1>...</h1>
+              <button className="threedots">...</button>
             </div>
+            <small>{announcement?.time}</small>
           </div>
         ))}
       </div>
@@ -28,6 +28,18 @@ export default function Announcements() {
             border: 1px solid green;
             display: flex;
             flex-direction: column;
+          }
+          .content {
+            display: flex;
+          }
+          button {
+            background: none; /* Removes any background color */
+            color: inherit; /* Inherits text color from parent */
+            border: none; /* Removes the default border */
+            padding: 0; /* Removes any default padding */
+            font: inherit; /* Inherits font styles from parent */
+            cursor: pointer; /* Ensures the cursor remains a pointer on hover */
+            outline: none; /* Removes the outline that appears on focus (consider accessibility implications) */
           }
         `}
       </style>

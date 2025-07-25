@@ -14,16 +14,21 @@ export default function Navbar() {
           <img src="chats.svg" alt="messages" />
         </button>
         <button>
-          <img src="/profile.png" alt="profile" className="profile" />
+          <img src="profile.svg" alt="profile" className="profile" />
         </button>
       </div>
       <style jsx>
         {`
+          .profile {
+            height: 42px;
+            width: auto;
+          }
+
           .navbar {
             padding: 0px;
             margin: 0px;
             display: flex;
-            justify-content: space-around ;
+            justify-content: space-around;
             align-items: center;
             background-color: #fff;
             position: fixed;

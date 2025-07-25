@@ -6,17 +6,19 @@ export default function Cards() {
   return (
     <div>
       <div className="dashboard-cards">
-        {basicStats?.map((stat, index) => (
-          <div className="card" key={index}>
-            <h2>{stat?.title}</h2>
-            <p>{stat?.value}</p>
-            <p>{stat?.description}</p>
-          </div>
-        ))}
+        <div className="card flex">
+          {basicStats?.map((stat, index) => (
+            <div className="minicards" key={index}>
+              <h2 className="card-title">{stat?.title}</h2>
+              <p className="card-value">{stat?.value}</p>
+              <p className="card-description">{stat?.description}</p>
+            </div>
+          ))}
+        </div>
         <div className="bigCards">
-          {overallStats?.map((stats) => {
+          {overallStats?.map((stats, index) => {
             return (
-              <div className="bigCard">
+              <div className="bigCard" key={index}>
                 <div>
                   <h2>{stats?.title}</h2>
                   <p>{stats?.value}</p>
@@ -34,19 +36,43 @@ export default function Cards() {
       </div>
       <style jsx>
         {`
+        .flex{
+        display:flex
+        align-items:center;
+        justify-content:center;
+        }
+        
           .dashboard-cards {
-            border: 1px solid black;
             display: flex;
+            flex-direction: column;
           }
           .card {
-            width: 204;
-            height: 136;
             border-radius: 10px;
-            padding: 12px 12px 12px 20px;
-            gap: 16px;
-            opacity: 1;
-            border: 1px solid black;
             background: #ffefe7;
+            gap: 20px;
+          }
+          .bigCards {
+            border-radius: 10px;
+            display: flex;
+            background: #ffefe7;
+            flex: 1;
+            border: 1px solid red;
+          }
+          .minicards {
+            border: none;
+            background-color: grey;
+          }
+          .card-title {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          .card-value {
+            font-size: 36px;
+            font-weight: 500;
+          }
+          .card-description {
+            font-size: 16px;
+            font-weight: 400;
           }
         `}
       </style>

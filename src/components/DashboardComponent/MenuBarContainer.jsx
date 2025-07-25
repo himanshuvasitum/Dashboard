@@ -18,9 +18,12 @@ const MenuBarContainer = () => {
         <img src="/Vasitum Logo.svg" alt="Logo" className="logo" />
         <h2>MAIN MENU</h2>
         <ul>
-          <li>
+          <li className="sider-text">
             <button>
-              <DashboardIcon fill={isActive ? "#FF5151" : "#B2B2B2"} />
+              <DashboardIcon
+                fill={isActive ? "#FF5151" : "#B2B2B2"}
+                width="24"
+              />
             </button>
             Dashboard
           </li>
@@ -66,6 +69,10 @@ const MenuBarContainer = () => {
         </ul>
       </div>
       <style jsx>{`
+        * {
+          padding: none;
+          margin: none;
+        }
         .menu-bar-container {
           display: flex;
           flex-direction: column;
@@ -91,6 +98,25 @@ const MenuBarContainer = () => {
         }
         img {
           margin-right: 10px;
+        }
+        button {
+          background: none; /* Removes any background color */
+          color: inherit; /* Inherits text color from parent */
+          border: none; /* Removes the default border */
+          padding: 0; /* Removes any default padding */
+          font: inherit; /* Inherits font styles from parent */
+          cursor: pointer; /* Ensures the cursor remains a pointer on hover */
+          outline: none; /* Removes the outline that appears on focus (consider accessibility implications) */
+        }
+
+        .sider-text {
+          font-family: Poppins;
+          font-weight: 500;
+          font-style: Medium;
+          font-size: 16px;
+          leading-trim: NONE;
+          line-height: 24px;
+          letter-spacing: 0%;
         }
       `}</style>
     </>

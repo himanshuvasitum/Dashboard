@@ -20,6 +20,7 @@ export default function MainContainer() {
             padding-left: 240px;
             padding-top: 40px;
             text-align: center;
+            height: 100vh;
           }
         `}
       </style>

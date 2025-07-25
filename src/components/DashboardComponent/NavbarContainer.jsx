@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar">
-        <img src="Hamburger_icon.svg.png" alt="hamburger" />
+        {/* <img src="" alt="hamburger" /> */}
         <input type="text" alt="search bar" id="myInput" />
 
         <button>
